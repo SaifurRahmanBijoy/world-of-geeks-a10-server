@@ -22,5 +22,5 @@ app.get("/courses/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("tutorial site running on port:", port);
+  console.log("tutorial site running on port no:", port);
 });
