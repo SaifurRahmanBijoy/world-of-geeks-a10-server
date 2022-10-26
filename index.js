@@ -21,6 +21,12 @@ app.get("/courses/:id", (req, res) => {
   res.send(selectedCourse);
 });
 
+app.get("/courses/:uid", (req, res) => {
+  const userID = req.params.uid;
+  const selectedAccess = courses.find((course) => course.uid === userID);
+  res.send(selectedAccess);
+});
+
 app.listen(port, () => {
   console.log("tutorial site running on port no:", port);
 });
